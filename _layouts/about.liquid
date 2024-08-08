@@ -1,0 +1,481 @@
+---
+layout: default
+---
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+.video-background {
+    position: relative;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    overflow: hidden;
+    transform: translate(-15%, -2%);
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.video-overlay h1 {
+    font-size: 4rem; /* Increased font size */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+    font-family: 'Arial', sans-serif; /* Use a stylish font */
+}
+.tag-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.tag-list li {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tag-list li:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.video-overlay p {
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+    font-family: 'Arial', sans-serif; /* Use a stylish font */
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 1rem 3rem; /* Adjusted padding for better button size */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.25rem; /* Adjusted font size */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow for better button appearance */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    color: #000;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden; /* Ensure the container hides overflow */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.carousel-card {
+    flex: 0 0 33.33%;
+    height: 400px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    border: none; /* No border */
+}
+
+.carousel-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.carousel-card:not(:hover) img {
+    transform: scale(1);
+}
+
+---
+layout: default
+---
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+.video-background {
+    position: relative;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Use a stylish font */
+}
+
+.video-overlay h1 {
+    font-size: 4rem; /* Increased font size */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.tag-list li {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tag-list li:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-overlay p {
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 2rem;
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 1rem 3rem; /* Adjusted padding for better button size */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.25rem; /* Adjusted font size */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow for better button appearance */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    color: #000;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden; /* Ensure the container hides overflow */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.carousel-card {
+    flex: 0 0 33.33%;
+    height: 400px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    border: none; /* No border */
+}
+
+.carousel-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.carousel-card:not(:hover) img {
+    transform: scale(1);
+}
+
+.carousel-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.7); /* Greyish overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+}
+.carousel-card:hover .carousel-card-info {
+    opacity: 1;
+}
+
+.carousel-card-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+  font-family: 'Arial', sans-serif; /* Use a stylish font */
+}
+
+.carousel-card-info p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(191,191,191,0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+  font-family: 'Arial', sans-serif; /* Use a stylish font */
+}
+
+/* Add CSS animation */
+.animated-image img {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
+
+<div class="video-background">
+  <video autoplay loop muted playsinline>
+    <source src="assets/video/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay">
+    <h1 style="color: white; font-family: 'Arial', sans-serif;">Sustainable Livestock Production System (SLPS) Lab</h1>
+    <ul class="tag-list">
+      <li>Feed Efficiency</li>
+      <li>Greenhouse Gas Emissions</li>
+      <li>Animal Welfare</li>
+      <li>Machine Learning</li>
+    </ul>
+    <a href="#" class="btn-explore">Explore</a>
+  </div>
+</div>
+
+<div class="post">
+<h2 style="text-align: center; font-weight: bold; animation: fadeIn 2s;">About Us</h2>
+<hr>
+<p style="text-align: justify; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
+    <strong>Sustainable Livestock Production System (SLPS) Lab</strong> at Dalhousie University focuses on improving livestock production <span style="color: #28a745; font-weight: bold;">sustainability</span> and <span style="color: #28a745; font-weight: bold;">efficiency</span>. Led by <strong>Dr. Ghader Manafiazar</strong>, we leverage techniques in <span style="color: #17a2b8; font-weight: bold;">nutrition</span>, <span style="color: #17a2b8; font-weight: bold;">genetics/genomics</span>, and <span style="color: #17a2b8; font-weight: bold;">machine learning</span>. Key projects include <span style="color: #dc3545; font-weight: bold;">non-invasive cattle ID</span>, <span style="color: #dc3545; font-weight: bold;">optimizing feed intake</span>, and <span style="color: #dc3545; font-weight: bold;">reducing methane emissions</span>. We collaborate with industry for practical solutions and are committed to education and outreach.
+</p>
+<p style="text-align: center; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
+    Visit us at <strong>Hayley Institute</strong>, Agricultural Campus, Dalhousie University.
+</p>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+    <!-- Image Carousel -->
+    <h2 style="text-align: center; font-weight: bold;">Our Projects</h2>
+    <hr>
+    <div class="carousel-container" id="imageCarousel">
+      {% for project in site.projects %}
+      <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="carousel-card">
+      <img src="{{ project.img }}" alt="{{ project.title }}">
+      <div class="carousel-card-info">
+      <h3 style="font-weight: bold;">{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- News -->
+    {% if page.news and site.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter.enabled and site.footer_fixed %}
+      {% include scripts/newsletter.liquid center=true %}
+    {% endif %}
+  </article>
+</div>
+
+<!-- Ensure Bootstrap and jQuery are included -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.herokuapp.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // JavaScript to enable automatic sliding of the carousel
+  const carousel = document.getElementById('imageCarousel');
+  let scrollAmount = 0;
+
+  function slide() {
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    if (scrollAmount >= maxScrollLeft) {
+      scrollAmount = 0;
+    } else {
+      scrollAmount += carousel.clientWidth / 3; // Slide one card width at a time
+    }
+    carousel.scrollTo({
+      top: 0,
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+  setInterval(slide, 2000); // Adjust the interval as needed
+</script>

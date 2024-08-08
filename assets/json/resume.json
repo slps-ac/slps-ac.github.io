@@ -1,0 +1,293 @@
+{
+    "basics": {
+        "name": "Dr. Ghader Manafiazar",
+        "label": "Assistant Professor, Sustainable Livestock Production System",
+        "email": "manafiazar@dal.ca",
+        "phone": "",
+        "url": "https://www.dal.ca/faculty/agriculture/animal-science-aquaculture.html",
+        "summary": "Dr. Ghader Manafiazar specializes in sustainable livestock production, focusing on feed efficiency, greenhouse gas emissions, and fitness traits in livestock using innovative techniques such as nutrition, genetics/genomics, and machine learning.",
+        "location": {
+            "address": "PO Box 550",
+            "postalCode": "B2N 5E3",
+            "city": "Truro",
+            "countryCode": "CA",
+            "region": "Nova Scotia"
+        },
+        "profiles": []
+    },
+    "work": [{
+            "name": "Dalhousie University",
+            "position": "Assistant Professor",
+            "url": "https://www.dal.ca/",
+            "startDate": "2020-07-01",
+            "endDate": "",
+            "summary": "Focus on sustainable livestock production systems, with research involving feed efficiency and greenhouse gas emissions.",
+            "highlights": []
+        },
+        {
+            "name": "BeefBooster Inc.",
+            "position": "Industry Research and Development Associate",
+            "url": "",
+            "startDate": "2015-06-01",
+            "endDate": "",
+            "summary": "Involved in research and development to improve the genetic and production traits in beef cattle.",
+            "highlights": []
+        },
+        {
+            "name": "University of Alberta",
+            "position": "Research Associate",
+            "url": "",
+            "startDate": "2018-01-01",
+            "endDate": "2020-01-01",
+            "summary": "Conducted research in genetics and genomics, focusing on livestock.",
+            "highlights": []
+        },
+        {
+            "name": "University of Alberta",
+            "position": "Postdoctoral Research Fellow",
+            "url": "",
+            "startDate": "2013-01-01",
+            "endDate": "2017-01-01",
+            "summary": "Postdoctoral research focused on livestock genetics and genomics.",
+            "highlights": []
+        },
+        {
+            "name": "University of Alberta",
+            "position": "Research Assistant",
+            "url": "",
+            "startDate": "2009-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Assisted in research projects focused on livestock production.",
+            "highlights": []
+        },
+        {
+            "name": "West Azarbaijan Agriculture Research Center",
+            "position": "Research Scientist",
+            "url": "",
+            "startDate": "2003-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Conducted research on various agricultural projects in Iran.",
+            "highlights": []
+        }
+    ],
+    "volunteer": [{
+            "organization": "Livestock Gentec Conference",
+            "location": "University of Alberta",
+            "position": "Head of Judging Committee",
+            "url": "",
+            "startDate": "2015-01-01",
+            "endDate": "2017-01-01",
+            "summary": "",
+            "highlights": []
+        },
+        {
+            "organization": "Western Canadian Dairy Seminar",
+            "location": "University of Alberta",
+            "position": "Coordinator Assistant",
+            "url": "",
+            "startDate": "2011-01-01",
+            "endDate": "2014-01-01",
+            "summary": "",
+            "highlights": []
+        },
+        {
+            "organization": "Agriculture, Food and Nutritional Science Department (AFNS)",
+            "location": "University of Alberta",
+            "position": "Member of Orientation Committee",
+            "url": "",
+            "startDate": "2010-01-01",
+            "endDate": "2013-01-01",
+            "summary": "",
+            "highlights": []
+        },
+        {
+            "organization": "Azerbaijani Cultural Student Association",
+            "location": "Edmonton, AB",
+            "position": "Vice President",
+            "url": "",
+            "startDate": "2010-01-01",
+            "endDate": "2013-01-01",
+            "summary": "",
+            "highlights": []
+        },
+        {
+            "organization": "Michener Park Residency",
+            "location": "Edmonton, AB",
+            "position": "Gym Volunteer",
+            "url": "",
+            "startDate": "2010-01-01",
+            "endDate": "2012-01-01",
+            "summary": "",
+            "highlights": []
+        }
+    ],
+    "education": [{
+            "institution": "University of Alberta",
+            "location": "Edmonton, Canada",
+            "url": "",
+            "area": "Quantitative Genetics/Genomics",
+            "studyType": "PhD",
+            "startDate": "",
+            "endDate": "",
+            "score": "",
+            "courses": []
+        },
+        {
+            "institution": "Tehran University",
+            "location": "Tehran, Iran",
+            "url": "",
+            "area": "Genetics and Animal Breeding",
+            "studyType": "MSc",
+            "startDate": "",
+            "endDate": "",
+            "score": "",
+            "courses": []
+        },
+        {
+            "institution": "University of Ahvaz (Shahid Charman)",
+            "location": "Ahvaz, Iran",
+            "url": "",
+            "area": "Animal Products Engineering",
+            "studyType": "BSc",
+            "startDate": "",
+            "endDate": "",
+            "score": "",
+            "courses": []
+        },
+        {
+            "institution": "Kurdistan University",
+            "location": "Sanandaj, Iran",
+            "url": "",
+            "area": "Animal Products Technology",
+            "studyType": "AS",
+            "startDate": "",
+            "endDate": "",
+            "score": "",
+            "courses": []
+        }
+    ],
+    "languages": [{
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Farsi",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Azerbaijani",
+            "fluency": "Native Speaker"
+        }
+    ],
+    "projects": [{
+            "name": "Investigating Use of Machine Learning Algorithms to Classify Beef Cows for Feed Efficiency and Stayability",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2020-06-01",
+            "endDate": "",
+            "url": "",
+            "roles": ["Co-lead"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Machine Learning", "Livestock", "Efficiency"]
+        },
+        {
+            "name": "Genetic Analysis of Feed Intake, Feed Efficiency, Female Fertility, and Cow Lifetime Productivity in Beef Cattle Raised Under Two Environments",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2018-04-01",
+            "endDate": "",
+            "url": "",
+            "roles": ["Co-investigator"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Livestock", "Efficiency"]
+        },
+        {
+            "name": "Optimizing Heterozygosity in Composite and Cross Bred Beef Population Using Genetic and Genomic Tools",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2017-01-01",
+            "endDate": "2020-01-01",
+            "url": "",
+            "roles": ["Co-lead"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Genomics"]
+        },
+        {
+            "name": "gGreenBeefCow: Identifying and Evaluating Genomic and Fecal Microbiome Markers for Low Methane Emissions in Beef Cattle",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2016-01-01",
+            "endDate": "2019-01-01",
+            "url": "",
+            "roles": ["Co-investigator"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Microbiome", "Livestock"]
+        },
+        {
+            "name": "Methane Emissions from Beef Cattle Bred for Low Residual Feed Intake",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2014-01-01",
+            "endDate": "2017-01-01",
+            "url": "",
+            "roles": ["Co-investigator"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Livestock", "Methane"]
+        },
+        {
+            "name": "Incorporating Genomic Information to Improve Carcass Quality and Reproduction Traits in Beef Cattle",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2015-01-01",
+            "endDate": "2017-01-01",
+            "url": "",
+            "roles": ["Lead"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Livestock", "Genomics"]
+        },
+        {
+            "name": "Optimizing Feed Intake Record and Efficiency Measures in Beef Cattle",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2015-01-01",
+            "endDate": "2017-01-01",
+            "url": "",
+            "roles": ["Postdoctoral Project"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Efficiency"]
+        },
+        {
+            "name": "Investigation of Residual Feed Intake in Dairy Cattle",
+            "summary": "",
+            "highlights": [],
+            "startDate": "2009-01-01",
+            "endDate": "2013-01-01",
+            "url": "",
+            "roles": ["PhD Research Project"],
+            "entity": "",
+            "type": "",
+            "location": "",
+            "categories": ["Genetics", "Efficiency"]
+        }
+    ],
+    "publications": [],
+    "skills": [],
+    "interests": [],
+    "references": [],
+    "awards": [],
+    "certificates": []
+}
