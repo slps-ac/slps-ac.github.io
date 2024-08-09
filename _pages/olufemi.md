@@ -8,3 +8,5 @@ Osonowo's expertise extends to building machine learning algorithms that can pre
 **Professional Affiliations**: Active member of the Genetic Society of America and other professional bodies.
 
 Mr. Osonowo is dedicated to contributing to the advancement of sustainable livestock production and utilizing cutting-edge technologies for the benefit of the industry.
+
+##### Socials  : [Linkedin](https://www.linkedin.com/in/osonowo-olufemi-110263132)
