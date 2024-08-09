@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
     padding: 0;
@@ -24,107 +25,10 @@ body {
 
 .video-background {
     position: relative;
-    width: 100vw; /* Ensure it covers the full viewport width */
-    height: 100vh; /* Ensure it covers the full viewport height */
-    overflow: hidden;
-    transform: translate(-15%, -2%);
-}
-
-.video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-
-.video-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    width: 80%;
-}
-
-.video-overlay h1 {
-    font-size: 4rem; /* Increased font size */
-    margin-bottom: 1rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-    font-family: 'Arial', sans-serif; /* Use a stylish font */
-}
-.tag-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    list-style: none;
-    padding: 0;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.tag-list li {
-    margin-right: 10px;
-    font-weight: bold;
-    color: #f2f2f2;
-    font-family: 'Poppins', sans-serif; /* Stylish font */
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.tag-list li:hover {
-    transform: scale(1.1);
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Keyframes for animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.video-overlay p {
-    font-size: 1.5rem; /* Adjusted font size */
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-    font-family: 'Arial', sans-serif; /* Use a stylish font */
-}
-
-.btn-explore {
-    display: inline-block;
-    padding: 1rem 3rem; /* Adjusted padding for better button size */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.25rem; /* Adjusted font size */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow for better button appearance */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-explore:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
-    color: #000;
-}
-
-.video-background {
-    position: relative;
-    width: 100vw; /* Ensure it covers the full viewport width */
-    height: 100vh; /* Ensure it covers the full viewport height */
     overflow: hidden;
+        transform: translate(-15%, -0%);
 }
 
 .video-background video {
@@ -145,19 +49,19 @@ body {
     color: white;
     text-align: center;
     width: 80%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-    font-family: 'Helvetica', 'Arial', sans-serif; /* Use a stylish font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 .video-overlay h1 {
-    font-size: 4rem; /* Increased font size */
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .tag-list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Allows tags to wrap on small screens */
     justify-content: center;
     margin-top: 10px;
     list-style: none;
@@ -166,10 +70,10 @@ body {
 }
 
 .tag-list li {
-    margin-right: 10px;
+    margin: 5px;
     font-weight: bold;
     color: #f2f2f2;
-    font-family: 'Poppins', sans-serif; /* Stylish font */
+    font-family: 'Poppins', sans-serif;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
@@ -181,38 +85,26 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Keyframes for animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .video-overlay p {
-    font-size: 1.5rem; /* Adjusted font size */
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .btn-explore {
     display: inline-block;
-    padding: 1rem 3rem; /* Adjusted padding for better button size */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 1rem 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
     color: black;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.25rem; /* Adjusted font size */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow for better button appearance */
+    font-size: 1.25rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-explore:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    background-color: rgba(255, 255, 255, 1);
     color: #000;
 }
 
@@ -221,7 +113,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    overflow-x: hidden; /* Ensure the container hides overflow */
+    overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 20px 0;
     position: relative;
@@ -233,7 +125,7 @@ body {
 
 .carousel-card {
     flex: 0 0 33.33%;
-    height: 400px;
+    height: 300px;
     position: relative;
     transition: transform 0.5s ease-in-out;
 }
@@ -252,17 +144,13 @@ body {
     z-index: 1;
 }
 
-.carousel-card:not(:hover) img {
-    transform: scale(1);
-}
-
 .carousel-card-info {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(50, 50, 50, 0.7); /* Greyish overlay */
+    background: rgba(50, 50, 50, 0.7);
     color: white;
     display: flex;
     flex-direction: column;
@@ -272,41 +160,111 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Stylish font */
+    font-family: 'Poppins', sans-serif;
 }
+
 .carousel-card:hover .carousel-card-info {
     opacity: 1;
 }
 
 .carousel-card-info h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-  font-family: 'Arial', sans-serif; /* Use a stylish font */
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
 
 .carousel-card-info p {
-  margin: 10px 0 0;
-  font-size: 1rem;
-  font-style: italic;
-  color: rgba(191,191,191,0.5);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-  font-family: 'Arial', sans-serif; /* Use a stylish font */
+    margin: 10px 0 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(191, 191, 191, 0.5);
 }
 
-/* Add CSS animation */
-.animated-image img {
-  animation: fadeIn 2s ease-in-out;
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .video-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-explore {
+        padding: 0.8rem 2.5rem;
+        font-size: 1rem;
+    }
 }
 
+@media (max-width: 992px) {
+    .carousel-card {
+        flex: 0 0 50%;
+        height: 250px;
+    }
+
+    .video-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .btn-explore {
+        padding: 0.6rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        flex: 0 0 100%;
+        height: 200px;
+    }
+
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-explore {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-overlay {
+        width: 90%;
+    }
+
+    .video-overlay h1 {
+        font-size: 1.2rem;
+    }
+
+    .video-overlay p {
+        font-size: 1rem;
+    }
+
+    .btn-explore {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .carousel-card {
+        height: 150px;
+    }
+
+    .carousel-card-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-card-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Keyframes for animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
@@ -317,7 +275,7 @@ body {
     Your browser does not support the video tag.
   </video>
   <div class="video-overlay">
-    <h1 style="color: white; font-family: 'Arial', sans-serif;">Sustainable Livestock Production System (SLPS) Lab</h1>
+    <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Sustainable Livestock Production System (SLPS) Lab</h1>
     <ul class="tag-list">
       <li>Feed Efficiency</li>
       <li>Greenhouse Gas Emissions</li>
@@ -329,21 +287,15 @@ body {
 </div>
 
 <div class="post">
-<h2 style="text-align: center; font-weight: bold; animation: fadeIn 2s;">About Us</h2>
-<hr>
-<p style="text-align: justify; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
-    <strong>Sustainable Livestock Production System (SLPS) Lab</strong> at Dalhousie University focuses on improving livestock production <span style="color: #28a745; font-weight: bold;">sustainability</span> and <span style="color: #28a745; font-weight: bold;">efficiency</span>. Led by <strong>Dr. Ghader Manafiazar</strong>, we leverage techniques in <span style="color: #17a2b8; font-weight: bold;">nutrition</span>, <span style="color: #17a2b8; font-weight: bold;">genetics/genomics</span>, and <span style="color: #17a2b8; font-weight: bold;">machine learning</span>. Key projects include <span style="color: #dc3545; font-weight: bold;">non-invasive cattle ID</span>, <span style="color: #dc3545; font-weight: bold;">optimizing feed intake</span>, and <span style="color: #dc3545; font-weight: bold;">reducing methane emissions</span>. We collaborate with industry for practical solutions and are committed to education and outreach.
-</p>
-<p style="text-align: center; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
-    Visit us at <strong>Hayley Institute</strong>, Agricultural Campus, Dalhousie University.
-</p>
+    <h2 style="text-align: center; font-weight: bold; animation: fadeIn 2s;">About Us</h2>
+    <hr>
+    <p style="text-align: justify; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
+        <strong>Sustainable Livestock Production System (SLPS) Lab</strong> at Dalhousie University focuses on improving livestock production <span style="color: #28a745; font-weight: bold;">sustainability</span> and <span style="color: #28a745; font-weight: bold;">efficiency</span>. Led by <strong>Dr. Ghader Manafiazar</strong>, we leverage techniques in <span style="color: #17a2b8; font-weight: bold;">nutrition</span>, <span style="color: #17a2b8; font-weight: bold;">genetics/genomics</span>, and <span style="color: #17a2b8; font-weight: bold;">machine learning</span>. Key projects include <span style="color: #dc3545; font-weight: bold;">non-invasive cattle ID</span>, <span style="color: #dc3545; font-weight: bold;">optimizing feed intake</span>, and <span style="color: #dc3545; font-weight: bold;">reducing methane emissions</span>. We collaborate with industry for practical solutions and are committed to education and outreach.
+    </p>
+    <p style="text-align: center; font-size: 1.2rem; line-height: 1.5; animation: fadeIn 2s;">
+        Visit us at <strong>Hayley Institute</strong>, Agricultural Campus, Dalhousie University.
+    </p>
 
-<style>
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-</style>
     <!-- Image Carousel -->
     <h2 style="text-align: center; font-weight: bold;">Our Projects</h2>
     <hr>
@@ -352,7 +304,7 @@ body {
       <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="carousel-card">
       <img src="{{ project.img }}" alt="{{ project.title }}">
       <div class="carousel-card-info">
-      <h3 style="font-weight: bold;">{{ project.title }}</h3>
+      <h3>{{ project.title }}</h3>
       <p>{{ project.description }}</p>
       </div>
       </a>
