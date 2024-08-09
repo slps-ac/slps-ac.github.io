@@ -2,9 +2,10 @@
 layout: page
 permalink: /teachings/
 title: Teachings
-description: Availabe listed position will display here
+description: Courses Taught by Dr. Ghader Manafiazar
 nav: true
 nav_order: 6
 ---
 
-Work in Progress
+
+{% include teaching.liquid %}

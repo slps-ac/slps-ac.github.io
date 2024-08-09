@@ -1,0 +1,97 @@
+<style>
+        .teaching-experience {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .teaching-experience h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .institution {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .institution h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #007BFF;
+        }
+
+        .teaching-entry {
+            margin-bottom: 20px;
+        }
+
+        .teaching-entry h3 {
+            font-size: 1.4em;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .teaching-entry .date {
+            font-size: 1em;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .teaching-entry .program {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .responsibilities {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .teaching-entry h3::before {
+            content: "🎓 ";
+        }
+
+        .teaching-entry h3:hover {
+            color: #007BFF;
+        }
+
+        .teaching-entry .date:hover {
+            color: #007BFF;
+        }
+    </style>
+
+<div class="teaching-experience">
+
+    {% for institution in site.data.teaching %}
+    <div class="institution">
+        <h2>{{ institution.institution }}</h2>
+
+        {% for course in institution.courses %}
+        <div class="teaching-entry">
+            <h3>{{ course.title }}</h3>
+            <p class="date">{{ course.dates }}</p>
+            <p class="program"><strong>{{ course.program }}</strong></p>
+            <ul class="responsibilities">
+                {% for responsibility in course.responsibilities %}
+                <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endfor %}
+
+</div>

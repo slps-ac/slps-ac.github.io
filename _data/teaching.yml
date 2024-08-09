@@ -1,0 +1,109 @@
+- institution: "Dalhousie University; Truro, NS, Canada"
+  courses:
+    - title: "Instructor, Ecology of Milk Production in Ruminants (AN SC 4004)"
+      dates: "F2021, F2022"
+      program: "B.Sc., program (11 students)"
+      responsibilities:
+        - "Instructor for 3 HR Theory and 3 HR lab / WK"
+        - "Delivered lectures on different topics including facts about GHG, approaches to mitigate GHG, current dairy industry condition, genomic and genetic applications in the dairy industry to make the industry more sustainable."
+        - "Designed assignments, and mid-term supervised assessments."
+        - "Invited expertise from other groups and industries to deliver lectures."
+        - "Coordinated discussion among students around different topics."
+
+    - title: "Instructor, Beef Production and Management (AN SC 2007)"
+      dates: "F2020, F2021, F2022, F2023"
+      program: "B.Sc., program (17 students)"
+      responsibilities:
+        - "Instructor for 3 HR Theory and 3 HR lab / WK"
+        - "Delivered lectures on different topics including beef industry trend, Canadian breeds, winter feeding, summer feeding, genomic and genetic applications in beef industry."
+        - "Designed assignments, and mid-term supervised assessments."
+        - "Invited expertise from other groups and industry to deliver lectures."
+
+- institution: "5th National Congress on Biodiversity and Agriculture; Orumiyeh, Iran"
+  courses:
+    - title: "Workshop Instructor"
+      dates: "W2021"
+      program: "Adult education, researchers from different disciplines (75 participants)"
+      responsibilities:
+        - "Designed materials on Introduction to the potential implication of Machine Learning in Animals Science and biodiversity."
+        - "Delivered lectures to adult education, researchers from different disciplines."
+
+- institution: "University of Alberta; Edmonton, AB, Canada"
+  courses:
+    - title: "Co-Instructor, Applied Beef Cattle Science (AN SC 474/574)"
+      dates: "W2020, W2019, W2018"
+      program: "B.Sc., program (17 students), Graduate students (3 students)"
+      responsibilities:
+        - "Instructor for 3 HR Theory and 3 HR lab / WK"
+        - "Delivered lectures on different topics including beef industry trend, Canadian breeds, winter feeding, summer feeding, genomic and genetic applications in beef industry."
+        - "Designed assignments, and mid-term supervised assessments."
+        - "Invited expertise from other groups and industry to deliver lectures."
+
+    - title: "Co-Instructor, Ruminant Digestion, Metabolism, and Nutrition (AN SC 461/561)"
+      dates: "F2019, F2018"
+      program: "B.Sc., program (28 students); 4 MSc students"
+      responsibilities:
+        - "Revised course outline and included different assignments, and clear description on course outcome expectations."
+        - "Instructor for 3 HR Theory and 3 HR lab / WK"
+        - "Planned to deliver lectures on different topics including energy, protein, minerals, water etc."
+        - "Designed assignments, and mid-term supervised assessments."
+        - "Invited expertise from industry to provide networking opportunity for the students."
+        - "Organized field trips: toured students to a beef (Blindman Beef and Bison farm) and a dairy (Tuxedo Farm ltd.) operation."
+
+    - title: "Teaching Assistant, Ruminant Digestion, Metabolism, and Nutrition (AN SC 461)"
+      dates: "W2013, W2012"
+      program: "B.Sc., program (16 students)"
+      responsibilities:
+        - "Assisted instructor for 3 HR Theory and 3 HR lab / WK."
+        - "Delivered lecture in couple sessions."
+        - "Marked assignments, presentations, and mid-term supervised assessments."
+
+- institution: "Uremia University, West Azerbaijan, Iran"
+  courses:
+    - title: "Instructor, Cell Biology and Genetics"
+      dates: "F2008"
+      program: "B.Sc., program (22 students)"
+      responsibilities:
+        - "Developed course materials."
+        - "Presented the course materials for 2 HR/WK."
+        - "Mentored students in lab work for 2 HR/WK."
+        - "Designed and marked all assignments, midterm and final supervised assessments."
+
+- institution: "Khoy Azad University, West Azerbaijan, Iran"
+  courses:
+    - title: "Instructor, Recording and Sampling in Animal Science"
+      dates: "F2007, F2008"
+      program: "B.Sc., program (25 students)"
+      responsibilities:
+        - "Developed course materials."
+        - "Presented the course materials for 2 HR/WK."
+        - "Designed and marked all assignments, midterm and final supervised assessments."
+
+- institution: "Shahid Bakery Applied Education Center, West Azerbaijan, Iran"
+  courses:
+    - title: "Instructor, Computer Applications in Animal Science"
+      dates: "W2008"
+      program: "B.Sc., program (23 students)"
+      responsibilities:
+        - "Created and developed course materials."
+        - "Presented the course materials for 2 HR/WK."
+        - "Marked all assignments, midterm and final supervised assessments."
+
+- institution: "West Azerbaijan Agricultural Engineering Organization, West Azerbaijan, Iran"
+  courses:
+    - title: "Workshop Instructor, Feed Formulation (UFFDA and NRC Software)"
+      dates: "F2008"
+      program: "Adult education, animal science graduates (14 participants)"
+      responsibilities:
+        - "Delivered theory 8 HR for 3 Days."
+        - "Taught NRC and UFFDA feed formulation software as a Lab work."
+        - "Marked all assignments and final project."
+        - "Provided consultation to the participants on one by one case."
+
+    - title: "Workshop Instructor, Dairy Cattle Management"
+      dates: "F2008, F2007"
+      program: "Adult education, Farmers (15 participants)"
+      responsibilities:
+        - "Delivered theory 2 HR for 3 Days."
+        - "Visited farm (one day) and addressed on farm problems."
+        - "Provided consultation to the farmers."

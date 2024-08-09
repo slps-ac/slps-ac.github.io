@@ -12,17 +12,17 @@ layout: page
             {% if profile.image_circular %}
               {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
             {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' style='width: 50%; height: 50%;'%}
             {% endif %}
             {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
             {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
           {% endif %}
           {% if profile.more_info %}
-            <div class="more-info">{{ profile.more_info }}</div>
+            <div class="more-info" style="text-align: center; margin-top: auto; margin-bottom: auto;">{{ profile.more_info }}</div>
           {% endif %}
         </div>
 
-        <div class="clearfix">
+        <div class="clearfix" style="margin-top: 5rem; margin-bottom: auto; padding: 10px;">
           {% if profile.content %}
             {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
             {{ profile_content | markdownify }}
@@ -30,13 +30,14 @@ layout: page
             {{ content }}
           {% endif %}
         </div>
+        </div>
 
         <!-- Social Media Credentials -->
         {% if profile.socials %}
           <div class="socials">
             <ul>
               {% for social in profile.socials %}
-          <li style="display: inline-block;"><a href="{{ social.url }}" target="_blank">{{ social.name }}</a></li>
+                <li><a href="{{ social.url }}" target="_blank">{{ social.name }}</a></li>
               {% endfor %}
             </ul>
           </div>

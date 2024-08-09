@@ -3,7 +3,7 @@ layout: page
 title: Understanding Animal Vocal Patterns Using Machine Learning
 description: Utilizing ML and DL techniques to predict calving time and assess post-weaning stress in dairy cows
 img: assets/img/11.jpg
-importance: 1
+importance: 4
 category: work
 related_publications: true
 ---
