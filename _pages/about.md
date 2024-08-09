@@ -41,22 +41,18 @@ social: true # includes social icons at the bottom of the page
 
 <div class="fade-in">
   <p class="slide-in">
-    The <span class="highlight">Sustainable Livestock Production Lab</span> at Dalhousie University, led by Dr. Ghader Manafiazar, is dedicated to enhancing the sustainability and efficiency of livestock production. Our lab's research spans critical areas such as <span class="highlight">feed efficiency</span>, <span class="highlight">greenhouse gas emissions</span>, and <span class="highlight">animal welfare</span>. By leveraging cutting-edge techniques in <span class="highlight">nutrition</span>, <span class="highlight">genetics/genomics</span>, and <span class="highlight">machine learning</span>, we aim to address the most pressing challenges in the field.
+    The <span class="highlight">Sustainable Livestock Production Lab</span> at Dalhousie University, led by Dr. Ghader Manafiazar, enhances livestock sustainability and efficiency. We focus on <span class="highlight">feed efficiency</span>, <span class="highlight">greenhouse gas emissions</span>, and <span class="highlight">animal welfare</span> using <span class="highlight">nutrition</span>, <span class="highlight">genetics/genomics</span>, and <span class="highlight">machine learning</span>.
   </p>
 
   <p class="slide-in">
-    Our key projects include developing non-invasive identification methods for cattle using machine vision, optimizing feed intake, and reducing methane emissions. These initiatives are undertaken in collaboration with industry partners to ensure that our solutions are practical and impactful.
+    Key projects include non-invasive cattle identification, optimizing feed intake, and reducing methane emissions, all in collaboration with industry partners.
   </p>
 
   <p class="slide-in">
-    Through our educational and outreach efforts, we are committed to fostering the next generation of researchers and industry professionals. Our lab not only contributes to scientific advancements but also to the practical implementation of sustainable livestock management practices.
+    We aim to foster the next generation of researchers while contributing to sustainable livestock practices.
   </p>
 
   <p class="slide-in">
-    For more information, please visit us at the <span class="highlight">Hayley Institute</span> on the <span class="highlight">Agricultural Campus</span> of Dalhousie University. Stay connected and follow our progress through our [social media channels](#).
-  </p>
-
-  <p class="fade-in">
-    Together, we strive for a more sustainable future in livestock production.
+    For more details, visit the <span class="highlight">Hayley Institute</span> at Dalhousie’s <span class="highlight">Agricultural Campus</span> or follow us on social media.
   </p>
 </div>

@@ -19,6 +19,8 @@ html, body {
 
 body {
     background: white;
+    margin: 0;
+    padding: 0;
 }
 
 .video-background {
@@ -26,16 +28,16 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    transform : translate(-15%,-2%)
 }
 
 .video-background video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%);
 }
 
 .video-overlay {
@@ -121,8 +123,8 @@ body {
 }
 
 .carousel-card {
-    flex: 0 0 50%;
-    height: 250px;
+    flex: 0 0 33.33%;
+    height: 300px;
     position: relative;
     transition: transform 0.5s ease-in-out;
 }
@@ -137,7 +139,7 @@ body {
 }
 
 .carousel-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     z-index: 1;
 }
 
@@ -157,6 +159,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .carousel-card:hover .carousel-card-info {
@@ -178,10 +181,21 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .video-overlay {
-        width: 90%;
-        padding: 15px;
+@media (max-width: 1200px) {
+    .video-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-explore {
+        padding: 0.8rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-card {
+        flex: 0 0 50%;
+        height: 250px;
     }
 
     .video-overlay h1 {
@@ -189,28 +203,34 @@ body {
     }
 
     .btn-explore {
-        padding: 0.6rem 1.5rem;
+        padding: 0.6rem 2rem;
         font-size: 0.9rem;
     }
+}
 
+@media (max-width: 768px) {
     .carousel-card {
         flex: 0 0 100%;
         height: 200px;
     }
 
-    .carousel-card-info h3 {
-        font-size: 1.2rem;
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-explore {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 576px) {
     .video-overlay {
-        width: 100%;
-        padding: 10px 20px;
+        width: 90%;
     }
 
     .video-overlay h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .video-overlay p {
@@ -218,8 +238,8 @@ body {
     }
 
     .btn-explore {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
     }
 
     .carousel-card {
@@ -227,7 +247,7 @@ body {
     }
 
     .carousel-card-info h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .carousel-card-info p {
@@ -254,7 +274,7 @@ body {
     Your browser does not support the video tag.
   </video>
   <div class="video-overlay">
-    <h1>Sustainable Livestock Production System (SLPS) Lab</h1>
+    <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Sustainable Livestock Production System (SLPS) Lab</h1>
     <ul class="tag-list">
       <li>Feed Efficiency</li>
       <li>Greenhouse Gas Emissions</li>
@@ -268,13 +288,7 @@ body {
 <div class="post">
     <h2 style="text-align: center; font-weight: bold; animation: fadeIn 2s;">About Us</h2>
     <hr>
-    <p style="text-align: justify; font-size: 1.1rem; line-height: 1.5; animation: fadeIn 2s;">
-        <strong>Sustainable Livestock Production System (SLPS) Lab</strong> at Dalhousie University focuses on improving livestock production <strong>sustainability</strong> and <strong>efficiency</strong>. Led by <strong>Dr. Ghader Manafiazar</strong>, we leverage techniques in <strong>nutrition</strong>, <strong>genetics/genomics</strong>, and <strong>machine learning</strong>. Key projects include <strong>non-invasive cattle ID</strong>, <strong>optimizing feed intake</strong>, and <strong>reducing methane emissions</strong>. We collaborate with industry for practical solutions and are committed to education and outreach.
-    </p>
-    <p style="text-align: center; font-size: 1.1rem; line-height: 1.5; animation: fadeIn 2s;">
-        Visit us at <strong>Hayley Institute</strong>, Agricultural Campus, Dalhousie University.
-    </p>
-
+    <div class="clearfix">{{ content }}</div>
     <!-- Image Carousel -->
     <h2 style="text-align: center; font-weight: bold;">Our Projects</h2>
     <hr>
