@@ -19,6 +19,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .cv-header img {
@@ -26,6 +27,7 @@ body {
     height: auto;
     border-radius: 4px;
     margin-right: 20px;
+    margin-bottom: 10px; /* Adds spacing on small screens when wrapping */
 }
 
 .cv-basics {
@@ -52,6 +54,48 @@ body {
   to {
     opacity: 1;
   }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cv-header img {
+        max-width: 100px; /* Smaller image on mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cv-basics {
+        width: 100%;
+    }
+
+    .cv-basics h3 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        margin-top: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cv-header {
+        margin-top: 15px;
+    }
+
+    .cv-basics h3 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        margin-top: 10px;
+        padding: 10px;
+    }
 }
 </style>
 
