@@ -2,7 +2,7 @@
 layout: page
 title: Integrating Metabolomics and Genomics Biomarkers to Improve Feed Efficiency in Sheep
 description: Enhancing feed efficiency in sheep through metabolomics and genomics biomarkers.
-img: assets/img/2_3.jpg
+img: assets/img/2_4.jpg
 importance: 2
 category: work
 link: 

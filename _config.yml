@@ -2,14 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: SLPS # the website title (if blank, full name will be used instead)
 first_name: Sustainable Livestock Production System
 
 middle_name: SLPS
 last_name: Lab
 email: you@example.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  The Sustainable Livestock Production System (SLPS) Lab is a research group at the University of Alberta, Department of Agricultural, Food and Nutritional Science. Our research focuses on the development of sustainable livestock production systems that are economically viable, environmentally friendly, and socially acceptable. We are particularly interested in the development of precision livestock farming technologies, the optimization of animal nutrition, and the reduction of greenhouse gas emissions from livestock production systems. Our research is supported by the Natural Sciences and Engineering Research Council of Canada (NSERC), the Alberta Livestock and Meat Agency (ALMA), and the Alberta Innovates Bio Solutions (AI Bio). We are always looking for motivated students and postdoctoral fellows to join our team. If you are interested in our research, please contact us.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -55,7 +55,7 @@ socials_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1000px
 
 # TODO: add layout settings (single page vs. multi-page)
 
