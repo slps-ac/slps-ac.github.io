@@ -1,5 +1,158 @@
 ---
+layout: page
 ---
+<style>
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the large year on the right */
+.publication-year {
+    color: #000000; /* Black color */
+    font-weight: bold; /* Make it bold */
+    font-size: 2.5em; /* Adjust size if needed */
+    text-align: right; /* Align it to the right */
+    margin-right: 20px; /* Add some spacing from the right edge */
+}
+
+/* Styling for the publication title */
+.publication-title {
+    font-weight: bold; /* Make the title bold */
+    font-size: 1.2em; /* Adjust size if needed */
+    margin-bottom: 10px; /* Add some spacing below */
+}
+
+.author, .periodical {
+    font-size: 1em; /* Regular size for author and periodical info */
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Profile Image */
+.profile-image {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+}
+
+.profile-caption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: gray;
+}
+
+/* Profile Content */
+.profile-content {
+  flex: 0 0 70%;
+  max-width: 70%;
+  text-align: justify;
+}
+
+/* Social Media */
+.socials {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.socials ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+socials li {
+  display: inline;
+  margin-right: 15px;
+}
+
+socials a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 50%;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 70%;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-content {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 90%;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profile-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+</style>
+
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -47,17 +200,10 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="publication-title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
-      {% assign author_array_size = entry.author_array | size %}
-
-      {% assign author_array_limit = author_array_size %}
-      {% if site.max_author_limit and author_array_size > site.max_author_limit %}
-        {% assign author_array_limit = site.max_author_limit %}
-      {% endif %}
-
-      {%- for author in entry.author_array limit: author_array_limit -%}
+      {%- for author in entry.author_array -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
@@ -79,7 +225,7 @@
 
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
+          {%- if forloop.last and forloop.length == entry.author_array.size %}and&nbsp;{% endif %}
         {% endif %}
         {%- if author_is_self -%}
           <em>
@@ -98,41 +244,6 @@
           {% endif %}
         {%- endif -%}
       {% endfor %}
-      {%- assign more_authors = author_array_size | minus: author_array_limit -%}
-
-      {%- assign more_authors_hide = more_authors | append: ' more author' -%}
-      {% if more_authors > 0 %}
-        {%- if more_authors > 1 -%}
-          {% assign more_authors_hide = more_authors_hide | append: 's' %}
-        {%- endif -%}
-        {% assign more_authors_show = '' %}
-        {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
-          {% unless forloop.last %}
-            {% assign more_authors_show = more_authors_show | append: ', ' %}
-          {% endunless %}
-        {%- endfor -%}
-        {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        , and
-        <span
-          class="more-authors"
-          title="click to view {{ more_authors_hide }}"
-          onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
-              var cursorPosition = 0;
-              var textAdder = setInterval(function(){
-                element.html(more_authors_text.substring(0, cursorPosition + 1));
-                if (++cursorPosition == more_authors_text.length){
-                  clearInterval(textAdder);
-                }
-            }, '{{ site.more_authors_animation_delay }}');
-          "
-        >
-          {{- more_authors_hide -}}
-        </span>
-      {% endif %}
       {% if entry.annotation %}
         <i
           class="fa-solid fa-circle-info ml-1"
@@ -186,7 +297,7 @@
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awareded{% endif -%}
+          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
       {% endif %}
       {% if entry.abstract %}

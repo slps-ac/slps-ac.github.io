@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: People
-description: members of the lab or group
+description: 
 nav: true
 nav_order: 3
 
@@ -12,15 +12,17 @@ profiles:
   - align: right
     image: Hamza.png
     content: hamza.md
+    tag: masters
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>Hamza Jawad</p><br>
+      <p>Hamza Jawad</p>
       <p>MSc, Dalhousie Univerisity AC </p>
  
    
   - align: left
     image: olufemi.jpg
     content: olufemi.md
+    tag: masters
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Olufemi Adekunle Osonowo </p>
@@ -28,6 +30,7 @@ profiles:
 
   - align: right
     image: Shima.jpg
+    tag: postdoc
     content: shima.md
     image_circular: false # crops the image to make it circular
     more_info: >
@@ -38,6 +41,7 @@ profiles:
   - align: left
     image: arhoma.jpg
     content: arhoma.md
+    tag: phd
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Arhoma Mohammed</p>
@@ -46,6 +50,7 @@ profiles:
    
   - align: right
     image: madiya.jpg
+    tag: ra_ga_ta
     content: madiya.md
     image_circular: false # crops the image to make it circular
     more_info: >

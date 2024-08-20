@@ -1,50 +1,211 @@
 ---
 layout: page
 ---
+<style>
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+.profile-heading {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Profile Image */
+.profile-image {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 60%;
+  height: auto;
+  border: 2px solid black;
+}
+
+.profile-caption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: gray;
+  font-weight: bold;
+}
+
+/* Profile Content */
+.profile-content {
+  flex: 0 0 70%;
+  max-width: 70%;
+  margin: 30px;
+  text-align: justify;
+}
+
+/* Social Media */
+.socials {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.socials ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 50%;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 70%;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-content {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    max-width: 90%;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profile-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}
+</style>
+
 <div class="post">
   <article>
-    {% if page.profiles %}
-      {% for profile in page.profiles %}
-        <hr>
-        <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
-          {% if profile.image %}
-            {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-            {% if profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' style='width: 50%; height: 50%;'%}
-            {% endif %}
-            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
-          {% endif %}
-          {% if profile.more_info %}
-            <div class="more-info" style="text-align: center; margin-top: auto; margin-bottom: auto;">{{ profile.more_info }}</div>
-          {% endif %}
-        </div>
 
-        <div class="clearfix" style="margin-top: 5rem; margin-bottom: auto; padding: 10px;">
-          {% if profile.content %}
-            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-          {% else %}
-            {{ content }}
-          {% endif %}
-        </div>
-        </div>
+    {% assign tags = "postdoc,phd,masters,ra_ga_ta" | split: "," %}
 
-        <!-- Social Media Credentials -->
-        {% if profile.socials %}
-          <div class="socials">
-            <ul>
-              {% for social in profile.socials %}
-                <li><a href="{{ social.url }}" target="_blank">{{ social.name }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
+    {% for tag in tags %}
+      <!-- Filter profiles by the current tag -->
+      {% assign filtered_profiles = page.profiles | where: "tag", tag %}
+
+      {% if filtered_profiles.size > 0 %}
+        <!-- Tag Heading -->
+        {% if tag == "postdoc" %}
+          <h2 class="profile-heading">Postdoctoral</h2>
+        {% elsif tag == "phd" %}
+          <h2 class="profile-heading">Ph.D.</h2>
+        {% elsif tag == "masters" %}
+          <h2 class="profile-heading">Masters</h2>
+        {% elsif tag == "ra_ga_ta" %}
+          <h2 class="profile-heading">RA/GA/Intern</h2>
         {% endif %}
-        <!-- End Social Media Credentials -->
+        <hr>
 
-      {% endfor %}
-    {% endif %}
+        {% for profile in filtered_profiles %}
+          <div class="profile-container">
+            
+            <!-- Profile Image -->
+            <div class="profile-image">
+              {% if profile.image %}
+                {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+                <img 
+                  src="{{ profile_image_path | relative_url }}" 
+                  class="profile-img" 
+                  alt="{{ profile.image }}" 
+                >
+                {% if profile.more_info %}
+                  <div class="profile-caption">{{ profile.more_info }}</div>
+                {% endif %}
+              {% endif %}
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+              {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
+              <div>{{ profile_content | markdownify }}</div>
+            </div>
+
+          </div>
+
+          <!-- Social Media Credentials -->
+          {% if profile.socials %}
+            <div class="socials">
+              <strong>Socials: </strong>
+              <ul>
+                {% for social in profile.socials %}
+                  <li>
+                    <a href="{{ social.url }}" target="_blank">{{ social.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    
   </article>
 </div>
