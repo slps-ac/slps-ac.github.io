@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Empowering Sustainable Livestock Practices- Exploring Relationships Between Management Practices, Farm Economics and Carbon Footprint​
-description: Enhancing sustainability in livestock production through management practices and carbon footprint analysis.
+description: Sustainable Livestock praticesand carbon footprint analysis.
 img: assets/img/3_2.jpg
 importance: 2
+tags: Sustainable Livestock pratices
 category: work
 link: 
 related_publications: true

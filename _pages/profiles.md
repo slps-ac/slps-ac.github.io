@@ -35,7 +35,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Shima Borzouie</p>
-      <p>Postdoctoral researcher specializing in metabolomics, cancer cell biology, and biochemistry.<br> Dalhousie Univerisity AC </p>
+      <p>Postdoctoral Researcher Specializing in Metabolomics, Cancer Cell Biology, and Biochemistry.<br> Dalhousie Univerisity AC </p>
  
 
   - align: left
@@ -45,7 +45,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>Arhoma Mohammed</p>
-      <p>PhD candidate in Animal Science with extensive experience in livestock management and poultry advisory. <br> Dalhousie Univerisity AC </p>
+      <p>PhD Candidate in Animal Science (Livestock Management and Poultry Advisory). <br> Dalhousie Univerisity AC </p>
  
    
   - align: right

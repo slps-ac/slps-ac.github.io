@@ -53,11 +53,11 @@ body {
 }
 
 .video-overlay h1 {
-    font-size: 2.9vw; /* Responsive font size based on viewport width */
+    font-size: 2.5vw; /* Responsive font size based on viewport width */
     margin-bottom: 1rem;
     font-weight: bold;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Add a more prominent shadow */
-    letter-spacing: 2px; /* Add some spacing between the letters */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
 }
 
 .tag-list {
@@ -71,13 +71,14 @@ body {
 }
 
 .tag-list li {
-    margin: 20px;
+    margin: 10px;
     font-weight: bold;
     color: #f2f2f2;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.5vw; /* Responsive font size for tags */
 }
 
 .tag-list li:hover {
@@ -85,43 +86,74 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.video-overlay p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
 .btn-explore {
     display: inline-block;
-    padding: 0.8vw 1.6vw; /* Smaller padding */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    padding: 0.8vw 1.6vw;
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
     margin: 30px;
-    text-decoration: none; /* No underline by default */
+    text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1.5vw; /* Smaller font size */
+    font-size: 1.5vw; /* Responsive font size for button */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, color 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.9); /* Add a border to match background */
+    border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .btn-explore:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque background on hover */
+    background-color: rgba(255, 255, 255, 1);
     color: black;
-    border: 2px solid rgba(255, 255, 255, 1); /* Solid border on hover */
-    text-decoration: none; /* Ensure no underline on hover */
+    border: 2px solid rgba(255, 255, 255, 1);
+    text-decoration: none;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-overlay h1 {
+        font-size: 4vw; /* Adjust font size for tablets */
+    }
+
+    .tag-list li {
+        font-size: 2.5vw; /* Adjust font size for tags on smaller screens */
+    }
+
+    .btn-explore {
+        font-size: 2.5vw; /* Adjust font size for button */
+        padding: 1.5vw 3vw; /* Adjust padding for button */
+    }
+}
+
+@media (max-width: 576px) {
+    .video-overlay h1 {
+        font-size: 5vw; /* Adjust font size for mobile devices */
+    }
+
+    .tag-list li {
+        font-size: 3.5vw; /* Adjust font size for tags on small screens */
+    }
+
+    .btn-explore {
+        font-size: 3.5vw; /* Adjust font size for button */
+        padding: 2vw 4vw; /* Adjust padding for button */
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+}
 
 .carousel-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
-    padding: 20px 0;
-    position: relative;
+    padding: 0; /* Removed padding to eliminate space between images */
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -129,24 +161,19 @@ body {
 }
 
 .carousel-card {
-    flex: 0 0 33.33%;
-    height: 300px;
+    flex: 0 0 calc(33.33%); /* Show three cards at once */
+    height: 350px; /* Set height */
     position: relative;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Maintain full height of the card */
+    object-fit: cover; /* Ensure the image scales without being cropped */
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
-    border: none; /* No border */
-}
-
-.carousel-card:hover {
-    transform: scale(1.1);
-    z-index: 1;
+    border-radius: 0; /* No rounded corners */
 }
 
 .carousel-card-info {
@@ -154,40 +181,28 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(50, 50, 50, 0.7);
-    color: white;
+    height: 100%; /* Cover the entire card */
+    background: rgba(0, 0, 0, 0.5); /* Slightly black, transparent background */
+    color: white; /* White text */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    font-color: white; /* Set the font color to white */
 }
 
 .carousel-card:hover .carousel-card-info {
-    opacity: 1;
+    opacity: 1; /* Show the text and background on hover */
 }
 
-.carousel-card-info h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.carousel-card-info p {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    font-style: italic;
-    color: rgba(191, 191, 191, 0.5);
-}
 /* Navigation Buttons */
 .carousel-nav {
-    position: fixed; /* Change from absolute to fixed */
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -200,83 +215,47 @@ body {
     z-index: 10;
 }
 
+.carousel-card-info h3,
+.carousel-card-info p {
+    color: white;
+}
 .carousel-nav:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-nav-left {
-    left: 10px; /* Keep left positioning fixed */
+    left: 10px;
 }
 
 .carousel-nav-right {
-    right: 10px; /* Keep right positioning fixed */
+    right: 10px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .video-overlay h1 {
-        font-size: 5vw; /* Smaller font size for slightly smaller screens */
-    }
-
-    .btn-explore {
-        padding: 1.2vw 2.3vw; /* Adjust button size for this screen size */
-        font-size: 2.2vw; /* Adjust font size */
+    .carousel-card {
+        flex: 0 0 calc(50%); /* Show two cards at once */
+        height: 280px; /* Adjust height */
     }
 }
 
 @media (max-width: 992px) {
     .carousel-card {
-        flex: 0 0 50%;
-        height: 250px;
-    }
-
-    .video-overlay h1 {
-        font-size: 6vw; /* Smaller font size for smaller screens */
-    }
-
-    .btn-explore {
-        padding: 1.2vw 2.4vw; /* Adjust button size for this screen size */
-        font-size: 2.5vw; /* Adjust font size */
+        flex: 0 0 calc(50%); /* Show two cards at once */
+        height: 250px; /* Adjust height */
     }
 }
 
 @media (max-width: 768px) {
     .carousel-card {
-        flex: 0 0 100%;
-        height: 200px;
-    }
-
-    .video-overlay h1 {
-        font-size: 5vw; /* Smaller font size for tablets */
-    }
-
-    .btn-explore {
-        padding: 2vw 4vw; /* Adjust button size for tablets */
-        font-size: 3vw; /* Adjust font size */
+        flex: 0 0 calc(100%); /* Show one card at a time */
+        height: 200px; /* Adjust height */
     }
 }
 
 @media (max-width: 576px) {
-    .video-overlay {
-        width: 90%;
-    }
-
-    .video-overlay h1 {
-        font-size: 4vw; /* Smaller font size for mobile devices */
-    }
-
-    .video-overlay p {
-        font-size: 1rem;
-    }
-
-    .btn-explore {
-        padding: 2.5vw 5vw; /* Adjust button size for mobile devices */
-        font-size: 3.5vw; /* Adjust font size */
-    }
-
     .carousel-card {
-        height: 150px;
+        height: 300px; /* Adjust height */
     }
 
     .carousel-card-info h3 {
@@ -309,7 +288,9 @@ body {
     <div class="video-overlay">
         <h1 style="color: white;">Sustainable Livestock Production System (SLPS) Lab</h1>
         <ul class="tag-list">
+
             <li>Feed Efficiency</li>
+            <li>Genomics</li>
             <li>Greenhouse Gas Emissions</li>
             <li>Animal Welfare</li>
             <li>Machine Learning</li>
@@ -326,19 +307,20 @@ body {
     <!-- Image Carousel -->
     <h2 style="text-align: center; font-weight: bold; margin-top: 50px;">Our Projects</h2>
     <hr>
-    <div class="carousel-container" id="imageCarousel" >
+    <div class="carousel-wrapper">
         <!-- Left Navigation Button -->
         <button class="carousel-nav carousel-nav-left" onclick="slideLeft()">&#8249;</button>
 
-        {% for project in site.projects %}
-        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="carousel-card">
-            <img src="{{ project.img }}" alt="{{ project.title }}">
-            <div class="carousel-card-info">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            </div>
-        </a>
-        {% endfor %}
+        <div class="carousel-container" id="imageCarousel">
+            {% for project in site.projects %}
+            <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="carousel-card">
+                <img src="{{ project.img }}" alt="{{ project.title }}">
+                <div class="carousel-card-info">
+                    <p>{{ project.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
 
         <!-- Right Navigation Button -->
         <button class="carousel-nav carousel-nav-right" onclick="slideRight()">&#8250;</button>
@@ -383,44 +365,19 @@ body {
     const carousel = document.getElementById('imageCarousel');
     let scrollAmount = 0;
 
-    function slide() {
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-        if (scrollAmount >= maxScrollLeft) {
-            scrollAmount = 0;
-        } else {
-            scrollAmount += carousel.clientWidth / 3; // Slide one card width at a time
-        }
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-
     function slideLeft() {
-        scrollAmount -= carousel.clientWidth / 3;
-        if (scrollAmount < 0) {
-            scrollAmount = 0;
-        }
-        carousel.scrollTo({
+        carousel.scrollBy({
             top: 0,
-            left: scrollAmount,
+            left: -carousel.clientWidth / 3, // Scroll one-third of the carousel width to the left
             behavior: 'smooth'
         });
     }
 
     function slideRight() {
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-        scrollAmount += carousel.clientWidth / 3;
-        if (scrollAmount > maxScrollLeft) {
-            scrollAmount = maxScrollLeft;
-        }
-        carousel.scrollTo({
+        carousel.scrollBy({
             top: 0,
-            left: scrollAmount,
+            left: carousel.clientWidth / 3, // Scroll one-third of the carousel width to the right
             behavior: 'smooth'
         });
     }
-
-    setInterval(slide, 5000); // Adjust the interval to 5 seconds for a slower slide
 </script>
