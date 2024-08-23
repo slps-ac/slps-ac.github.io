@@ -1,6 +1,16 @@
+---
+layout: page
+title: Madiya Patriquin
+description: RA at Dalhousie University specializing in metabolomics, cancer cell biology, and biochemistry.
+img: assets/img/profile_madiya.jpg
+importance: 2
+category: team
+linkedin: https://www.linkedin.com/in/madiya-patriquin-b50120264/
+---
+
 Madiya Patriquin is a RA at Dalhousie University, working within the Departments of Animal Science and Pathology. Her research spans a wide array of disciplines, including metabolomics, cancer cell biology, and biochemistry, with a particular focus on human health, animal science, food science, and plant science. Dr. Patriquin is highly skilled in high-throughput metabolite analysis, utilizing advanced techniques such as NMR, LC-MS/MS, GC-MS, HPLC, and ICP-MS.
 
-In addition to her expertise in metabolomics,  cancer research focuses on understanding immune cell interactions and evaluating vaccine effects in murine models. Her multidisciplinary approach to research allows her to make significant contributions across various scientific domains, enhancing both human and animal health.
+In addition to her expertise in metabolomics, her cancer research focuses on understanding immune cell interactions and evaluating vaccine effects in murine models. Her multidisciplinary approach to research allows her to make significant contributions across various scientific domains, enhancing both human and animal health.
 
 ### Key Areas of Expertise:
 - **Metabolomics**: Expertise in high-throughput analysis using NMR, LC-MS/MS, GC-MS, HPLC, and ICP-MS.
