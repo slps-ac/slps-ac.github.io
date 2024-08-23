@@ -185,9 +185,10 @@ body {
     font-style: italic;
     color: rgba(191, 191, 191, 0.5);
 }
+
 /* Navigation Buttons */
 .carousel-nav {
-    position: fixed; /* Change from absolute to fixed */
+    position: absolute; /* Positioned relative to the carousel container */
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -205,13 +206,12 @@ body {
 }
 
 .carousel-nav-left {
-    left: 10px; /* Keep left positioning fixed */
+    left: 10px; /* Keep this fixed to the left edge of the carousel */
 }
 
 .carousel-nav-right {
-    right: 10px; /* Keep right positioning fixed */
+    right: 10px; /* Keep this fixed to the right edge of the carousel */
 }
-
 
 /* Responsive Design */
 @media (max-width: 1200px) {
